@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sltcap-plus"
+version = "0.1.0"
+description = "SLTCAP+ ion-count estimator for binary electrolytes"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Daniel Bischoff", email = "daniel.bischoff@tum.de" },
+]
+dependencies = [
+  "numpy>=1.23",
+  "scipy>=1.9",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7",
+  "pytest-cov>=4",
+]
+
+[project.scripts]
+sltcap-plus = "sltcap_plus:cli"
+
+[project.urls]
+Repository = "https://github.com/bisdan/sltcap-plus"
+"Data and analysis" = "https://doi.org/10.5281/zenodo.21687546"
+
+[tool.setuptools]
+py-modules = ["sltcap_plus"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers"
+testpaths = ["tests"]

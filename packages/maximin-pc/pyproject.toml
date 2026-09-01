@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maximin-pc"
+version = "0.1.0"
+description = "Find or evaluate special positions in a periodic MDAnalysis Universe."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Daniel Bischoff", email = "daniel.bischoff@tum.de" }]
+dependencies = [
+    "MDAnalysis>=2.0",
+    "numpy>=1.23",
+    "tqdm>=4.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+maximin-pc = "maximin_pc.main:cli_main"
+
+[project.urls]
+Repository = "https://github.com/bisdan/maximin-pc"
+"Data and analysis" = "https://doi.org/10.5281/zenodo.21687546"
+
+[tool.setuptools.packages.find]
+include = ["maximin_pc*"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers"
+testpaths = ["tests"]

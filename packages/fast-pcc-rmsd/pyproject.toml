@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fast-pcc-rmsd"
+version = "0.1.0"
+description = "Pairwise-contact RMSD analysis with MDAnalysis."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Daniel Bischoff", email = "daniel.bischoff@tum.de" }]
+dependencies = [
+    "MDAnalysis>=2.9.0",
+    "tqdm>=4.0",
+]
+keywords = ["MDAnalysis", "RMSD", "molecular-dynamics", "contacts"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+
+[project.urls]
+Repository = "https://github.com/bisdan/fast-pcc-rmsd"
+"Data and analysis" = "https://doi.org/10.5281/zenodo.21687546"
+
+[project.optional-dependencies]
+cuda12 = ["cupy-cuda12x[ctk]>=14.0,<15.0"]
+cuda13 = ["cupy-cuda13x[ctk]>=14.0,<15.0"]
+test = ["pytest>=7"]
+
+[project.scripts]
+fpcc = "fast_pcc_rmsd.cli:main"
+"fpcc.py" = "fast_pcc_rmsd.cli:main"
+
+[tool.setuptools]
+packages = ["fast_pcc_rmsd"]
+py-modules = ["fpcc"]
+
+[tool.pytest.ini_options]
+addopts = "--strict-config --strict-markers"
+testpaths = ["tests"]
