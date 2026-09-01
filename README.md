@@ -24,5 +24,5 @@ Run each package's tests from its directory with `python3 -m pytest`.
 All packages are released under the MIT License. The `fast-pcc-rmsd` package
 also offers optional CUDA extras documented in its package README.
 
-This publication release combines the source snapshots of `sltcap-plus`
-(`29c2139`), `fast-pcc-rmsd` (`c02a569`), and `maximin-pc` (`7e68af6`).
+Usage examples for these tools are available in the accompanying
+[Zenodo data and analysis repository](https://doi.org/10.5281/zenodo.21687546).
