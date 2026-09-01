@@ -1,9 +1,8 @@
 ![Periodic protein-crystal unit-cell simulation banner](assets/banner.png)
 
-# RCFE analysis tools
+# Relative crystallization free-energy (RCFE) analysis tools
 
-This repository contains the three command-line tools used for the relative
-crystallization free-energy study:
+This repository contains the three command-line tools used for a RCFE for protein crystals study:
 
 - `sltcap-plus` calculates salt-ion counts for a target concentration.
 - `fast-pcc-rmsd` calculates pairwise crystal-contact RMSDs (`fpcc`).
