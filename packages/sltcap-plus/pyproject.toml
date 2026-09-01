@@ -27,7 +27,7 @@ test = [
 sltcap-plus = "sltcap_plus:cli"
 
 [project.urls]
-Repository = "https://github.com/bisdan/sltcap-plus"
+Repository = "https://github.com/bisdan/rcfe-tools"
 "Data and analysis" = "https://doi.org/10.5281/zenodo.21687546"
 
 [tool.setuptools]

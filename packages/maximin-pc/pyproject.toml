@@ -23,7 +23,7 @@ test = ["pytest>=7"]
 maximin-pc = "maximin_pc.main:cli_main"
 
 [project.urls]
-Repository = "https://github.com/bisdan/maximin-pc"
+Repository = "https://github.com/bisdan/rcfe-tools"
 "Data and analysis" = "https://doi.org/10.5281/zenodo.21687546"
 
 [tool.setuptools.packages.find]

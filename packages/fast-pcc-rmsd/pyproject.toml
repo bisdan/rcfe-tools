@@ -27,7 +27,7 @@ classifiers = [
 ]
 
 [project.urls]
-Repository = "https://github.com/bisdan/fast-pcc-rmsd"
+Repository = "https://github.com/bisdan/rcfe-tools"
 "Data and analysis" = "https://doi.org/10.5281/zenodo.21687546"
 
 [project.optional-dependencies]
