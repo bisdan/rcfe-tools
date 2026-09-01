@@ -1,3 +1,5 @@
+![Periodic protein-crystal unit-cell simulation banner](assets/banner.png)
+
 # RCFE analysis tools
 
 This repository contains the three command-line tools used for the relative
